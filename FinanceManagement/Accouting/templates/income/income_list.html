@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Income List</h1>
+  <ul>
+    {% for income in incomes %}
+      <li>{{ income.amount }} - {{ income.date }}</li>
+    {% endfor %}
+  </ul><button>
+  <a class="nav-link" href="{% url 'add_income' %}">Add Income</a></button>
+{% endblock %}

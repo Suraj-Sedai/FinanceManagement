@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Expense List</h1>
+  <ul>
+    {% for expense in expenses %}
+      <li>{{ expense.amount }} - {{ expense.date }}</li>
+    {% endfor %}
+  </ul><button>
+  <a class="nav-link" href="{% url 'add_expense' %}">Add expense</a>
+  </button>{% endblock %}
